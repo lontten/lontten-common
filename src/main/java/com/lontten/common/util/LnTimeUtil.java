@@ -24,7 +24,7 @@
  * ------------------------------------------------------------*/
 package com.lontten.common.util;
 
-public class TimeUtil {
+public class LnTimeUtil {
 
     public static void sleep(long millis) {
         try {
