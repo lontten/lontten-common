@@ -118,7 +118,7 @@ public class LnStringUtil {
      * @return
      */
     public static boolean hasText(String str) {
-        return !isBlank(str);
+        return !noText(str);
     }
 
     /**
@@ -130,7 +130,7 @@ public class LnStringUtil {
      * @param str
      * @return
      */
-    public static boolean isBlank(String str) {
+    public static boolean noText(String str) {
         if (str == null) return true;
         str = str.replaceAll("\u3000", "");
         str = str.replaceAll("\u00A0", "");
