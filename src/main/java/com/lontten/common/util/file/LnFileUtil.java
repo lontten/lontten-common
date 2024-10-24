@@ -77,7 +77,7 @@ public class LnFileUtil {
      */
     public static File createFile(@Nullable String path) throws IOException {
         Preconditions.checkArgument(LnStringUtil.hasText(path), "path no text");
-        Preconditions.checkArgument(path.endsWith("/"), "path is dir.");
+        Preconditions.checkArgument(!path.endsWith("/"), "path is dir.");
 
         File file = new File(path);
         File parentFile = file.getParentFile();
@@ -116,8 +116,8 @@ public class LnFileUtil {
     public static File createSysTempFile(@Nullable String prefix, @Nullable String suffix) throws IOException {
         Preconditions.checkArgument(LnStringUtil.hasText(prefix), "prefix no text");
         Preconditions.checkArgument(LnStringUtil.hasText(suffix), "suffix no text");
-        Preconditions.checkArgument(prefix.contains("/"), "prefix has / ");
-        Preconditions.checkArgument(suffix.contains("/"), "suffix has / ");
+        Preconditions.checkArgument(!prefix.contains("/"), "prefix has / ");
+        Preconditions.checkArgument(!suffix.contains("/"), "suffix has / ");
 
         return createSysTempFile(prefix + "." + suffix);
     }
@@ -133,8 +133,8 @@ public class LnFileUtil {
     public static File createJvmTempFile(@Nullable String prefix, @Nullable String suffix) throws IOException {
         Preconditions.checkArgument(LnStringUtil.hasText(prefix), "prefix no text");
         Preconditions.checkArgument(LnStringUtil.hasText(suffix), "suffix no text");
-        Preconditions.checkArgument(prefix.contains("/"), "prefix has / ");
-        Preconditions.checkArgument(suffix.contains("/"), "suffix has / ");
+        Preconditions.checkArgument(!prefix.contains("/"), "prefix has / ");
+        Preconditions.checkArgument(!suffix.contains("/"), "suffix has / ");
 
         File file = File.createTempFile(prefix, suffix);
         file.deleteOnExit();
@@ -150,7 +150,7 @@ public class LnFileUtil {
      */
     public static File createSysTempFile(@Nullable String fileName) throws IOException {
         Preconditions.checkArgument(LnStringUtil.hasText(fileName), "fileName no text");
-        Preconditions.checkArgument(fileName.contains("/"), "fileName has / ");
+        Preconditions.checkArgument(!fileName.contains("/"), "fileName has / ");
         Path path = Paths.get(sysTmpDirPath, UUID.randomUUID().toString(), fileName);
         return createFile(path.toString());
     }
