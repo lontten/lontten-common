@@ -17,7 +17,7 @@
  * Project Authors :  lontten   <lontten@163.com>
  * Contributors    :  xxxx   <xx@xx.com>
  *                 |  yyyy   <yy@yy.com>
- * Created On      : <2024-10-18>
+ * Created On      : <2024-10-24>
  * Last Modified   : <2024-10-18>
  *
  * lontten-common: Lontten 项目使用的通用组件库
@@ -25,6 +25,7 @@
 package com.lontten.common.util;
 
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -117,7 +118,7 @@ public class LnStringUtil {
      * @param str
      * @return
      */
-    public static boolean hasText(String str) {
+    public static boolean hasText(@Nullable String str) {
         return !noText(str);
     }
 
@@ -130,7 +131,7 @@ public class LnStringUtil {
      * @param str
      * @return
      */
-    public static boolean noText(String str) {
+    public static boolean noText(@Nullable String str) {
         if (str == null) return true;
         str = str.replaceAll("\u3000", "");
         str = str.replaceAll("\u00A0", "");
