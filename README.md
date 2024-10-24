@@ -11,5 +11,26 @@
 
 > Lontten 项目使用的通用组件库
 
-
 #### 使用说明
+
+##### 1、Java 项目添加 Maven 依赖
+
+``` xml
+<dependency>
+    <groupId>io.github.lontten</groupId>
+    <artifactId>lontten-common</artifactId>
+    <version>0.0.5.RELEASE</version>
+</dependency>
+```
+
+##### 2、Java 项目添加 Gradle (Kotlin) 依赖
+
+``` kotlin
+implementation("io.github.lontten:lontten-common:0.0.5.RELEASE")
+```
+
+##### 3、Java 项目添加 Gradle 依赖
+
+``` kotlin
+implementation 'io.github.lontten:lontten-common:0.0.5.RELEASE'
+```
