@@ -22,7 +22,7 @@
  *
  * lontten-common: Lontten 项目使用的通用组件库
  * ------------------------------------------------------------*/
-package com.lontten.common.util;
+package com.lontten.common.util.lang;
 
 import java.time.format.DateTimeFormatter;
 

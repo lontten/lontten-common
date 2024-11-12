@@ -25,7 +25,7 @@
 package com.lontten.common.util.file;
 
 import com.google.common.base.Preconditions;
-import com.lontten.common.util.LnStringUtil;
+import com.lontten.common.util.lang.LnStringUtil;
 
 import javax.annotation.Nullable;
 import java.io.File;

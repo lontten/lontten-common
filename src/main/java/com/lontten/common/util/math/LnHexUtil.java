@@ -2,7 +2,7 @@ package com.lontten.common.util.math;
 
 import java.util.HexFormat;
 
-import static com.lontten.common.util.LnStringUtil.noText;
+import static com.lontten.common.util.lang.LnStringUtil.noText;
 
 public class LnHexUtil {
     public static HexFormat hexFormat = HexFormat.of();
