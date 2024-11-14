@@ -19,18 +19,18 @@
 <dependency>
     <groupId>io.github.lontten</groupId>
     <artifactId>lontten-common</artifactId>
-    <version>0.0.7.RELEASE</version>
+    <version>0.0.8.RELEASE</version>
 </dependency>
 ```
 
 ##### 2、Java 项目添加 Gradle (Kotlin) 依赖
 
 ``` kotlin
-implementation("io.github.lontten:lontten-common:0.0.7.RELEASE")
+implementation("io.github.lontten:lontten-common:0.0.8.RELEASE")
 ```
 
 ##### 3、Java 项目添加 Gradle 依赖
 
 ``` kotlin
-implementation 'io.github.lontten:lontten-common:0.0.7.RELEASE'
+implementation 'io.github.lontten:lontten-common:0.0.8.RELEASE'
 ```
